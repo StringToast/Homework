@@ -50,7 +50,7 @@ public class TermTest {
             assertEquals("Expected and actual exponents DON'T match", e, test.getExponent());
         }
     }
-
+    
     @Test
     public void testSetAll() {
         Term test = new Term();
@@ -102,6 +102,7 @@ public class TermTest {
             assertEquals("Expected and actual exponents DON'T match", e, test.getExponent());
         }
     }
+    
 
     @Test
     public void testDefaultConstructor() {
@@ -110,6 +111,7 @@ public class TermTest {
         assertEquals("Expected and actual coefficients DON'T match", 1, test.getCoefficient());
         assertEquals("Expected and actual exponents DON'T match", 1, test.getExponent());
     }
+    
 
     @Test
     public void testCopyConstructor() {
@@ -142,6 +144,7 @@ public class TermTest {
             assertEquals("Expected and actual exponents DON'T match", e, test.getExponent());
         }
     }
+    
 
     @Test
     public void testEqualsTrue() {
@@ -198,8 +201,7 @@ public class TermTest {
             e = EXPONENTS[i];
 
             test = new Term(1, e);
-            compareResult = original.compareTo(test);
-
+            compareResult = original.compareTo(test);       
             if( COMPARE_TO_VALUES[i] == ORIGINAL_EQUALS_TEST) {
                 assertEquals("Expected and actual compareTo result (original exponent EQUALS test exponent) DON'T match",
                         0, compareResult);
@@ -214,5 +216,4 @@ public class TermTest {
 
         }
     }
-
 }
